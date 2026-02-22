@@ -1,61 +1,34 @@
-==================================================
-[AIR 전략 연구소 SSOT 병합 정본 v1.5]
-Owner: 이세로 (Sero)
-Date: 2026-02-18 (America/Vancouver)
-Machine: MacBook Air 15 (2025 M4, 24GB RAM, 1TB SSD, macOS Tahoe 26.2)
-Primary Role: 전략·리서치·문서 전문가 (Knowledge Sovereign Node)
-Changelog:
-- v1.4 → v1.5: LLM 라우팅 규칙 v3.0으로 전면 개정
-- 모델 계층: GPT + Claude 교차 검증 구조로 확정
-- 작업 유형별 파이프라인 분리 (Simple / Standard / Critical)
-- L0 분류 강화, L2 승격 조건 강화
-- 몰트봇 → OpenClaw 용어 통일
-- 우선순위 체계 명문화
-==================================================
+# AIR SSOT v2.0
+# Owner: 이세로 (Sero) | 2026-02-21 | LOCKED
 
-0) 문서 위상 (SSOT / LOCKED)
-- 본 문서는 AIR 전략 연구소의 모든 정책, 역할, 기대 성과, 라우팅 규칙을 단일 정본으로 LOCKED.
-- SURFY/Lenovo 등 실행 노드와 구조적으로 완전히 분리.
-- AIR는 "리서치·문서 전문 노드"로서 전략/연구/문서 자산 관리.
+## 문서 위상
 
-1) AIR 사양
-- CPU/Chip: Apple M4 / RAM: 24GB / 저장공간: 1TB SSD
-- OS: macOS Tahoe 26.2 / 쿨링: 팬리스
+본 문서는 AIR 전략 연구소의 메타 거버넌스 문서다. 정책/역할/라우팅의 참조 구조를 정의하며 행동 규범 자체는 각 정책 문서를 따른다. 구조 변경 시 Chief 승인 후 DECISIONS_LOG append + 본 문서 업데이트.
 
-2) AIR 전략 연구소 목적
+## AIR 목적
+
 - 글로벌/국내 자료 수집 및 구조화
 - 전략/사업/정책 문서 작성
-- 교민일보, 쿠룽 프로젝트 문서 지원
 - 근거 기반 의사결정 자료 제공
-- RAG 기반 내부 검색 및 참조 허브
+- RAG 기반 내부 검색 및 참조 허브 (Stage 4)
 
-3) AIR 역할 정의
-- 전략 연구소 (Knowledge Sovereign Node)
-- 리서치 + 문서 생성 + 자료 구조화
-- 프로젝트 실행과 무관 / 문서 자산 축적 및 장기 관리
+## 정책 우선순위 (충돌 시 적용)
 
-4) 정책 우선순위 체계 (충돌 시 아래 순서 적용)
-[P1] 절대 금지 규칙 — 어떤 상황에서도 최우선
-[P2] L2 승격 조건 — 고위험 작업은 무조건 검증
-[P3] GitHub SSOT 운영 원칙 — 문서 정합성 유지
-[P4] LLM 라우팅 규칙 — 효율/비용 최적화
-[P5] 기타 운영 정책 — 상황에 따라 유연 적용
+P1: 절대 금지 규칙  CONSTITUTION.md / ALLOWLIST.md
+P2: 고위험 작업 검증  ROUTING.md L2 승격 조건
+P3: GitHub SSOT 운영 원칙  본 문서
+P4: LLM 라우팅 규칙  ROUTING.md
+P4-1: 정책 문서 검토 절차  REVIEW_PROTOCOL.md
+P5: 기타 운영 정책  상황에 따라 유연 적용
 
-5) 절대 금지 (P1 최우선)
-- 토큰/키 평문 저장 금지
-- 불확실한 사실/수치/사례 단정 금지 (확인 필요 표시)
-- 되돌릴 수 없는 작업은 승인 정책 거침
+## OpenClaw 버전 정책
 
-6) OpenClaw 버전 정책
 - Stable Channel 최신 공식 릴리스만 사용
 - 테스트/베타/RC 버전 금지
-- 설치 완료 후 버전 로그 기록 (~/.openclaw/ssot_version_log.txt)
+- 설치 완료 후 버전 로그 기록: ~/.openclaw/ssot_version_log.txt
 
-7) 장기 유지 전략
-- 문서 자산 지속 갱신 및 RAG 반영
-- 신규 프로젝트 추가 시 라우터 규칙만 업데이트
-- 실행/테스트 노드는 SURFY, Lenovo로 분리
+## 장기 유지 전략
 
-==================================================
-LOCKED: AIR 전략 연구소 SSOT v1.5
-==================================================
+- 문서 자산 지속 갱신 및 RAG 반영 (Stage 4)
+- 신규 프로젝트 추가 시 ROUTING 규칙만 업데이트
+- 실행/테스트 노드는 AIR와 분리 유지
